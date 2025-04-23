@@ -1,0 +1,35 @@
+/* Global Styling */
+:root {
+  --primary-color: #ff0000; /* Red */
+  --secondary-color: #00ff00; /* Green */
+  --dark-bg: #222831; /* Dark Background */
+  --text-color: #eeeeee; /* Soft White Text */
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+html, body {
+  height: 100%;
+  background: linear-gradient(to right, #ff0000, #00ff00);
+  animation: gradientShift 10s infinite alternate ease-in-out;
+}
+
+body {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: gradientShift 10s infinite alternate; /* Gradient Animation */
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background: linear-gradient(to right, #ff0000, #00ff00); }
+  50% { background: linear-gradient(to right, #cc0000, #00cc00); }
+  100% { background: linear-gradient(to right, #ff0000, #00ff00); }
+}
+
+body {
+  animation: gradientShift 10s infinite alternate ease-in-out;
+}
